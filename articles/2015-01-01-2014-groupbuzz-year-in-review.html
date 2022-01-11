@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2014 groupbuzz year in review | Brad Pauly</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/skeleton.css">
+  <link rel="stylesheet" href="/ruby.css">
+  <link rel="stylesheet" href="/common.css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-414395-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+  <header id="header" role="banner">
+    <nav>
+      <div class="container">
+        <div class="row">
+          <span class="menu u-pull-right">
+            <a title="Blog" href="/blog/">Blog</a>
+          </span>
+          <a href="/">Brad Pauly</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <p>#2014 GroupBuzz year in review</p>
+
+<p><span class="author">Brad Pauly — January 1, 2015</span></p>
+
+<p><a href="http://groupbuzz.io">GroupBuzz</a> officially launched in the second half of 2013 making 2014 the first full year on record and I'm happy to say that things are going well. It didn't always <em>feel</em> that way though. Bootstrapping a product is difficult and it's easy to look at others and think "oh wow, they are killing it and I feel like I'm just hanging on".  However, when I remembered that my goal was not "have exactly the same revenue numbers as someone else on the same timeline," but was "build and sell a product that helps people kill pain," I realize that it is what I'm doing and it is going fine.</p>
+
+<p>Before I get into the details I want to thank two people. <a href="http://twitter.com/amyhow">Amy Hoy</a> and <a href="http://twitter.com/alexhillman">Alex Hillman</a>. Thank you! They run the <a href="http://30x500.com/">30x500</a> class that taught me many valuable lessons about building a product. On top of that, they are delightful people that I'm grateful to know. By the way, they just <a href="https://stackingbricks.simplecast.fm/">launched a terrific podcast</a>. Alex also gave me the kick in the butt I needed to get <a href="http://groupbuzz.io">GroupBuzz</a> out into the world. <a href="http://www.indyhall.org/">Indy Hall</a>, the coworking space that Alex cofounded, was the first real group to use GroupBuzz. After that, and a lot of discussion about what GroupBuzz is and intends to be, Alex and I became partners in crime. His experience with community building has helped make GroupBuzz communities even more awesome.</p>
+
+<p>Now, let's do the numbers (appologies to Kai Ryssdal). In 2014 GroupBuzz almost hit $10K in revenue. The numbers I'm using are after Stripe's fees so the actual numbers are slightly higher. As you can see in this graph, and I'll get into the details more later, there was a big jump in expenses later in the year that pretty much ate all the revenue.</p>
+
+<p><img src="http://f.cl.ly/items/2B340F3C1a3O0N3W3y0o/Screen%20Shot%202014-12-30%20at%201.56.24%20PM.png"></p>
+
+<h2>What went well</h2>
+
+<h3>People love using GroupBuzz</h3>
+
+<p>"Our people LOVE GroupBuzz" is a direct quote from an email exchange with a new customer. There are more testimonials like that on <a href="http://groupbuzz.io">the GroupBuzz site</a> and it feels great to get that kind of feedback. Especially when most of your time is looking ahead and what you need to do next. Taking a moment to remember that customers are happy with what you've done so far is a worthwhile exercise. There were also a number of unwritten testimonials that were a pleasant surprise. A number of community members liked GroupBuzz so much that they became customers. Some of them used it for communities they were already part of and some started new communities altogether. That's my favorite kind of testimonial.</p>
+
+<h3>Growth and learning</h3>
+
+<p>I'm taking a few steps back here. 18 months ago revenue was essentially zero. Now it's nearing $1,000 MRR. Could it be more? Probably. Do I want it to be more? Absolutely. In the mean time I'm happy to celebrate progress <em>and</em> shoot higher.</p>
+
+<p>I've built many products for other people. I'm learnig how to build a product "in my spare time." I put that in quotes because spare time doesn't really exist, or at least it isn't relevant. You can only work so many hours until you are just spinning your wheels. If you have 4 hours of "spare time" at the end of the day, it's useless if you're burnt and can't focus, at least it is for me. What I've learned is that you need to understand yourself and your limits and work within them. I'm the kind of developer that needs time to emerse myself in something. I let ideas simmer. I sketch things out on paper before executing. It doesn't matter if it is literally a visual thing, like user-facing UI, or totally hidden to the user, like application architecture decisions. That's how I do my best work. I'm learning to be more intentional with my time. I know myself better and can plan accordingly. I'm less likely to burn out and know how long I can stay focused. I also know that when I am fried, it's time to jump in the ocean or go for a bike ride. It's good for me, my customers (and clients) and the product. Win win win!</p>
+
+<h2>What didn't go well</h2>
+
+<p>When you're just getting off the ground it's difficult to make an assessment. On one hand, you've gotten off the ground and that is awesome. On the other hand, you're flapping your wings like crazy when you'd like to be soaring above the clouds. Not quite as awesome.</p>
+
+<h3>Expenses went way up, but didn't kill us</h3>
+
+<p>Take a look at that graph again. Yep, expenses. I made a big mistake with hosting. GroupBuzz runs on Engine Yard. Originally it was all on one small instance. I knew it would eventually need to run on multiple instances (seperate app and db servers) eventually and I made the jump too soon. Not only that, but I didn't understand the pricing well enough and it bit me in the ass. I went to a bunch of small instances thinking that would relieve the pain of going from one to many down the road and that the instances sizes could be increased as needed. Unfortunately Engine Yard changed their pricing at the same time. Their pricing is now broken down into "infrastructure" (the AWS instances you are using) and "platform and support" (the engine yard platform and support of it). The catch is that when you have more than 3 instances you are automatically moved from "Basic" to "Standard" Platform &amp; Support. The table below illustrates what happens as you go from 1 to 4 instances (some of the larger instances are more expensive, but the jump is similar).</p>
+
+<table class="table table-condensed">
+<tr>
+<th>Number of Instances</th>
+<th>Platform &amp; Support (per month)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>$50</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$101</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$151</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>$403</strong></td>
+</tr>
+</table>
+
+<p>Mistakes are going to be made. I think everyone knows that. Surviving those mistakes and making adjustments are the keys. I made a mistake that essentially eclipsed revenue. Not only that but it took a while to straighten out. I didn't want to disrupt our customers so got some outside opions, made a plan to execute the changes, notified our customers that we would have some down time for the changes well in advance, and <em>then</em> executed the plan. That ended up spanning a few months and each month we were hit with high expenses. This month is the first that we won't be feeling the effects of that mistake. It was painful, but not didn't kill the business.</p>
+
+<p>If you are an Engine Yard customer, I highly recommend using larger instances and keeping it under 3. Lesson learned!</p>
+
+<h3>Inconsistency</h3>
+
+<p>I want to be more consistent with my efforts. I touched on this above as something that went well because I'm learning. I also want to be more efficient. I need time to sink into the work I'm doing so frequent conext switching hurts my productivity. I'm trying to schedule my GroupBuzz work ahead of time instead of "whenever I can get a free minute." It might sound simple, and it is in theory, but I find it challenging. I don't get paid for the time I work on GroupBuzz in the same way I get paid for contract work. It's an investment. I forget the longer term goal and only see the lack of short term reward. Consistent steps toward the goal, even if they are small, will still move me toward the goal.</p>
+
+<h3>Planning</h3>
+
+<p>Alex and I live on opposite sides of the United States so when we get the chance for face-to-face work we cover a lot of ground in a short amount of time. Digesting all that we cover and turning it into things that need to be done in detail is daunting. As a developer I tend to think about writing code first. I need to take more time to break things down into smaller project and then plan the execution of those projects.</p>
+
+<h2>What's next</h2>
+
+<p>In a word, grow. Grow customers. Grow the product. Grow myself as product developer and business owner. Grow my working relationship with Alex. Continue with the things that are working and improve the things that aren't. Grow it all steadily, consistenly and intentionally.</p>
+
+<h3>more specifically..</h3>
+
+<p>Taking a cue from <a href="https://unicornfree.com/2015/a-meditation-on-goals">Amy's recent post about setting goals</a>, here are five goals for 2015.</p>
+
+<ul>
+<li>launch turn-key signups (coming soon!)</li>
+<li>ship something new once a month, even if it's tiny
+[]()* give community leaders more tools to help them rock</li>
+<li>remove any obstacles to community participation</li>
+<li>schedule weekly time for more consistent work on GroupBuzz</li>
+</ul>
+      </div>
+    </div>
+
+    <div  style="background:#FFF4DC; padding:5px 20px 0 20px;">
+    <div class="row">
+      <div class="twelve columns">
+        <h4 style="text-align:center;margin-top:10px;">Want new posts sent to your email?</h4>
+      </div>
+    </div>
+
+    <script src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
+    <div class="row" id="ck_success_msg" style="display:none;">
+      <div class="tweleve columns">
+        <p style="color:#33C3F0;">Success! Now check your email to confirm your subscription.</p>
+      </div>
+    </div>
+
+    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/153904/subscribe" data-remote="true">
+      <input type="hidden" name="id" value="153904" id="landing_page_id">
+
+      <div class="row">
+        <div class="eight columns">
+          <input type="email" name="email" class="u-full-width" id="ck_emailField" placeholder="you@example.com" required>
+        </div>
+
+        <div class="four columns">
+          <input type="submit" value="Send me blog posts" name="subscribe" class="u-full-width button button-primary">
+        </div>
+      </div>
+    </form>
+  </div>
+
+    <div class="row">
+      <div class="twelve columns">
+        <p>I'm always looking for new topics to write about.
+          Stuck on a problem or working on something interesting?
+          You can reach me on Twitter <a href="https://twitter.com/bradpauly" target="_blank">@bradpauly</a> or
+        <a href="mailto:hi@bradpauly.com?subject=blog post">send me an email</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
