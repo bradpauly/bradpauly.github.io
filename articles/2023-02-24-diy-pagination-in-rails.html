@@ -63,15 +63,35 @@ total pages, each showing the rows described below.</p>
 </ul>
 
 <p>At a minimum we need to figure out how to break the rows into pages.
-  Let's try sovling this part in a ruby console.</p>
+Let's try sovling this part in a ruby console.</p>
 
-  <script src="https://gist.github.com/bradpauly/623c0ba70cfb047e41cac3bf338bf444.js"></script>
+<script src="https://gist.github.com/bradpauly/623c0ba70cfb047e41cac3bf338bf444.js"></script>
 
 <p>Bingo. We now have a way to determine the total number of pages.
 Let's move this into a class to organize it a bit and write some 
 tests to cover more cases.</p>
 
 <script src="https://gist.github.com/bradpauly/bce840a6b1dbfdfde14ff9f759f432c2.js"></script>
+
+<p>So far so good, however, we're missing a very important piece.
+The most important in fact, which you can probably guess. There aren't
+any actual rows yet, we're only calculating numbers based on an already
+known total number of rows.</p>
+
+<p>Let's change our code so that we can give the Pager class rows to use for the 
+calculation. I'm going to start by using an Array because it's a quick and 
+convenient place to start writing tests.
+
+I'd encourage you to think of rows, not as an Array, but as something 
+that's playing a role.
+
+We know that Array has a count method that will give us the total number 
+of items in the array. That's enough for us to make the calculation.
+Here's the key: <strong>*anything* that responds to a count method could play
+the role of rows</strong>.</p>
+
+<script src="https://gist.github.com/bradpauly/d5fa221afc399ee95cc1befc1e2e6428.js"></script>
+
 
 
       </div>
