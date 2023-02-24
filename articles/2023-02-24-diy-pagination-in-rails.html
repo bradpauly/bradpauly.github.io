@@ -98,28 +98,40 @@ of items in the array. That's enough for us to make the calculation.</p>
 <script src="https://gist.github.com/bradpauly/08e9d85b5b77659afadfcbfaff6dc5de.js"></script>
 
 
+<p>Now that we have the rows we need to organize them into pages as described above.
+  Let's take a step back and consider how this code might be used to help us decide 
+  if the design should evolve. It's very common to show paginated data in table form
+  with links to other pages. Imagine we're building a database of recipes.
+
+  It might looks something like the table below.</p>
+
 <table class="u-full-width">
   <thead>
-    <tr><th>Row Number</th></tr>
+    <tr><th>Recipe</th></tr>
   </thead>
   <tbody>
-    <tr><td>Row 1</td></tr>
-    <tr><td>Row 2</td></tr>
-    <tr><td>Row 3</td></tr>
-    <tr><td>Row 4</td></tr>
-    <tr><td>Row 5</td></tr>
-    <tr><td>Row 6</td></tr>
-    <tr><td>Row 7</td></tr>
-    <tr><td>Row 8</td></tr>
-    <tr><td>Row 9</td></tr>
-    <tr><td>Row 10</td></tr>
+    <tr><td>Tuna Sashimi</td></tr>
+    <tr><td>Chicken Fajitas</td></tr>
+    <tr><td>Bruschette with Tomato</td></tr>
+    <tr><td>Mushroom Risotto</td></tr>
+    <tr><td>Caprese Salad</td></tr>
+    <tr><td>Pasta and Beans</td></tr>
+    <tr><td>French Fries with Sausages</td></tr>
+    <tr><td>Teriyaki Chicken Donburi</td></tr>
+    <tr><td>Pasta and Beans</td></tr>
+    <tr><td>French Toast</td></tr>
   </tbody>
+  <tfoot>
+    <tr><th>
+      Pages: 
+      <strong><a href="#">1</a></strong>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+    </th></tr>
+  </tfoot>
 </table>
 
-<a class="button button-primary" href="#">1</a>
-<a class="button" href="#">2</a>
-<a class="button" href="#">3</a>
-<a class="button" href="#">4</a>
 
       </div>
     </div>
