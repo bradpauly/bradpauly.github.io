@@ -51,18 +51,10 @@
 to practice good design and someday you might find that you'd like to change the 
 way pagination works in your app.</p>
 
-Goals
-Ability to page through the rows returned from a query, 10 at a time.
-Good design: breaking things down into pieces that are easy to understand with contained 
-responsibilities.
-
-
-What does pagination afford?
-
 <p>What do we need to implement pagination? Let's start by assuming we want the simplest 
 possible solution. We want to show 10 rows per page and have the ability to show the 
 rows in any of the pages. For example, if our query returns 33 rows, we would have 4 
-total pages, the first three showing 10 rows and the last page showing 3.</p>
+total pages, each showing the rows described below.</p>
 
 <ul>
 <li>Page 1: Show rows 1-10</li>
@@ -71,8 +63,8 @@ total pages, the first three showing 10 rows and the last page showing 3.</p>
 <li>Page 4: Show rows 31-33</li>
 </ul>
 
-<p>Let's try sovling this in ruby console. Starting with what we know,
-calculate the number of pages.</p>
+<p>At a minimum we need to figure out how to break the rows into pages.
+  Let's try sovling this part in a ruby console.</p>
 
 <script src="https://gist.github.com/bradpauly/33c9586e3aa95c4ca07073c40c41e961.js"></script>
 
