@@ -88,20 +88,38 @@ that's playing a role.
 We know that Array has a count method that will give us the total number 
 of items in the array. That's enough for us to make the calculation.</p>
 
-<p><strong>Here's the key</strong>: <em>anything</em> that responds to a count method could play
-the role of rows</strong>.</p>
-
 <script src="https://gist.github.com/bradpauly/d5fa221afc399ee95cc1befc1e2e6428.js"></script>
 
-<p>To illustrate how the method is what's important as opposed to the kind of thing
-  that's receiving the method call, this is the same code tested using an OpenStruct 
+<p><strong>Here's the key</strong>: <em>anything</em> that responds to a count method could play
+  the role of rows</strong>. To illustrate this, below is the same code tested using an OpenStruct 
   instead of an Array.
 </p>
 
 <script src="https://gist.github.com/bradpauly/08e9d85b5b77659afadfcbfaff6dc5de.js"></script>
 
 
+<table class="u-full-width">
+  <thead>
+    <tr><th>Row Number</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Row 1</td></tr>
+    <tr><td>Row 2</td></tr>
+    <tr><td>Row 3</td></tr>
+    <tr><td>Row 4</td></tr>
+    <tr><td>Row 5</td></tr>
+    <tr><td>Row 6</td></tr>
+    <tr><td>Row 7</td></tr>
+    <tr><td>Row 8</td></tr>
+    <tr><td>Row 9</td></tr>
+    <tr><td>Row 10</td></tr>
+  </tbody>
+</table>
 
+<a class="button button-primary" href="#">1</a>
+<a class="button" href="#">2</a>
+<a class="button" href="#">3</a>
+<a class="button" href="#">4</a>
 
       </div>
     </div>
