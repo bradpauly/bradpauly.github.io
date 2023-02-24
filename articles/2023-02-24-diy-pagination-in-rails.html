@@ -102,9 +102,9 @@ of items in the array. That's enough for us to make the calculation.</p>
   Let's take a step back and consider how this code might be used to help us decide 
   if the design should evolve. It's very common to show paginated data in table form
   with links to other pages. Imagine we're building a database of recipes.
-
   It might looks something like the table below.</p>
 
+<h3>Favorite Recipes</h3>
 <table class="u-full-width">
   <thead>
     <tr><th>Recipe</th></tr>
@@ -131,6 +131,31 @@ of items in the array. That's enough for us to make the calculation.</p>
     </th></tr>
   </tfoot>
 </table>
+
+<p>We want to be able to show the 10 rows for any given page.
+  We could add a rows method that takes a page number and
+  returns the appropriate rows.
+</p>
+
+<script src="https://gist.github.com/bradpauly/673318242d09d0506b66607b71f5d231.js"></script>
+
+<p>This is confusing to me. The word rows is used
+  for different purposes making it hard to know 
+  what's being referred to when reading the code.
+</p>
+
+
+
+
+<h3>More soon..</h3>
+<p>This post isn't finished yet, we still need to 
+  make this work in rails.
+</p>
+
+
+
+
+
 
 
       </div>
