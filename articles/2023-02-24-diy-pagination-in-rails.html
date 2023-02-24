@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DIY Pagination | Brad Pauly</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/skeleton.css">
+  <link rel="stylesheet" href="/ruby.css">
+  <link rel="stylesheet" href="/common.css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-414395-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+  <header id="header" role="banner">
+    <nav>
+      <div class="container">
+        <div class="row">
+          <span class="menu u-pull-right">
+            <a title="Articles" href="/articles/">Articles</a>
+          </span>
+          <a href="/">Brad Pauly</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <h1>DIY Pagination in Rails</h1>
+
+<p><span class="author">Brad Pauly — February 24, 2023</span></p>
+
+
+<p>There are a <a href="https://www.ruby-toolbox.com/categories/pagination">lot of great 
+  gems that provide pagination</a> for your ActiveRecord models, other ORM libraries, 
+  and data structures. Why would you want to write your own? It's a great way
+to practice good design and someday you might find that you'd like to change the 
+way pagination works in your app.</p>
+
+Goals
+Ability to page through the rows returned from a query, 10 at a time.
+Good design: breaking things down into pieces that are easy to understand with contained 
+responsibilities.
+
+
+What does pagination afford?
+
+<p>What do we need to implement pagination? Let's start by assuming we want the simplest 
+possible solution. We want to show 10 rows per page and have the ability to show the 
+rows in any of the pages. For example, if our query returns 33 rows, we would have 4 
+total pages, the first three showing 10 rows and the last page showing 3.</p>
+
+<ul>
+<li>Page 1: Show rows 1-10</li>
+<li>Page 2: Show rows 11-20</li>
+<li>Page 3: Show rows 21-30</li>
+<li>Page 4: Show rows 31-33</li>
+</ul>
+
+<p>Let's try sovling this in ruby console. Starting with what we know,
+calculate the number of pages.</p>
+
+<script src="https://gist.github.com/bradpauly/33c9586e3aa95c4ca07073c40c41e961.js"></script>
+
+<p>Bingo. We now have a way to determine the total number of pages.
+Let's move this into a class to organize it a bit and write some 
+tests to cover more cases.</p>
+
+<script src="https://gist.github.com/bradpauly/bce840a6b1dbfdfde14ff9f759f432c2.js"></script>
+
+
+      </div>
+    </div>
+
+    <div  style="background:#FFF4DC; padding:5px 20px 0 20px;">
+    <div class="row">
+      <div class="twelve columns">
+        <h4 style="text-align:center;margin-top:10px;">Want new posts sent to your email?</h4>
+      </div>
+    </div>
+
+    <script src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
+    <div class="row" id="ck_success_msg" style="display:none;">
+      <div class="tweleve columns">
+        <p style="color:#33C3F0;">Success! Now check your email to confirm your subscription.</p>
+      </div>
+    </div>
+
+    <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/153904/subscribe" data-remote="true">
+      <input type="hidden" name="id" value="153904" id="landing_page_id">
+
+      <div class="row">
+        <div class="eight columns">
+          <input type="email" name="email" class="u-full-width" id="ck_emailField" placeholder="you@example.com" required>
+        </div>
+
+        <div class="four columns">
+          <input type="submit" value="Send me blog posts" name="subscribe" class="u-full-width button button-primary">
+        </div>
+      </div>
+    </form>
+  </div>
+
+    <div class="row">
+      <div class="twelve columns">
+        <p>I'm always looking for new topics to write about.
+          Stuck on a problem or working on something interesting?
+          You can reach me on Twitter <a href="https://twitter.com/bradpauly" target="_blank">@bradpauly</a> or
+        <a href="mailto:hi@bradpauly.com?subject=blog post">send me an email</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
