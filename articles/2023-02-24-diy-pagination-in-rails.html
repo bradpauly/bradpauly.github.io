@@ -148,17 +148,20 @@ of items in the array. That's enough for us to make the calculation.</p>
   Does it help to sketch out how we might use it there? We
   want to show the 10 rows for a page out of all the results
   from a query. What if we gave the Pager results instead of rows?
-  And since we're only dealing with one page per request,
-  we don't need to call rows with a different page, so let's
-  move that to the initializer method too.
 </p>
 
 <script src="https://gist.github.com/bradpauly/e9916e246acfefea2bd5b4f55e6e73cd.js"></script>
+
+<script src="https://gist.github.com/bradpauly/33aa7f1da6bfda9a5b00a53a6d8b90c9.js"></script>
 
 <p>What do you think? There might be something better but I think
   it's good enough for now. We removed the potential confusion
   around rows.
 </p>
+
+<p>And since we're only dealing with one page per request,
+  we don't need to call rows with a different page, so let's
+  move that to the initializer method too.</p>
 
 
 
